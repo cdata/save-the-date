@@ -24,8 +24,6 @@
     "iron-image": "polymerelements/iron-image#^1.0.0",
     "paper-fab": "polymerelements/paper-fab#^1.0.0",
     "paper-button": "polymerelements/paper-button#^1.0.0",
-    "paper-radio-button": "polymerelements/paper-radio-button#^1.0.0",
-    "paper-radio-group": "polymerelements/paper-radio-group#^1.0.0",
     "paper-checkbox": "polymerelements/paper-checkbox#^1.0.0",
     "paper-input": "polymerelements/paper-input#^1.0.0"
   }
