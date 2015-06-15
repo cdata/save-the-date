@@ -31,10 +31,10 @@ gulp.task('deploy-images', function () {
 gulp.task('vulcanize', ['transform-client', 'copy-client', 'deploy-images'], function () {
   return gulp.src('dist/client/index.html')
     .pipe(vulcanize({
-      dest: 'dist',
-      inline: true,
-      csp: true,
-      strip: true
+      abspath: '',
+      inlineScripts: true,
+      inlineCss: true,
+      stripComments: true
     }))
     .pipe(gulp.dest('dist'));
 });
