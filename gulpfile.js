@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var babel = require('gulp-babel');
 var connect = require('gulp-connect');
 var vulcanize = require('gulp-vulcanize');
-var clean = require('gulp-clean');
+var del = require('del');
 
 gulp.task('server', function () {
   connect.server({
@@ -44,14 +44,11 @@ gulp.task('copy-textures-for-deploy', function () {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', function () {
-  return gulp.src([
-      'dist/client/**/*',
-      'dist/index.*'
-    ], {
-      read: false
-    })
-    .pipe(clean());
+gulp.task('clean', function (callback) {
+  del([
+    'dist/client/**/*',
+    'dist/index.*'
+  ], callback);
 });
 
 gulp.task('watch', function () {
